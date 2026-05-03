@@ -1,17 +1,4 @@
 package Model;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Windows 10
- */
-import Model.Fecha;
-import Model.Paciente;
-import Model.Profesional;
 import java.util.List;
 
 //Revisar analisis.
@@ -22,16 +9,18 @@ public class Estudios {
     private Paciente paciente;
     private Profesional profesional;
     private int estado;//[1]EN_ELABORACION, [2] FINALIZADO, [3] RETIRADO, [4] ENVIDADO;
-    private List<Integer> infoEstudios;
+
     
-    //Contructores
+    //Contructor vacio
     public Estudios(){
-        this.estado = 0;
-        this.realizacion = null;
-        this.entrega = null;
-        this.paciente = null;
-        this.profesional = null;
-        
+    }
+    //Constructor con parametros
+    public Estudios(Fecha realizacion1, Fecha entrega1, Paciente paciente1, Profesional profesional1, int estado1){
+        this.realizacion = realizacion1;
+        this.entrega = entrega1;
+        this.paciente = paciente1;
+        this.profesional = profesional1;
+        this.estado = estado1;
     }
     
     //getters
@@ -68,6 +57,10 @@ public class Estudios {
     public void setEstado ( int ES1){
         this.estado = ES1;
         
+    }
+    @Override
+    public String toString(){
+        return realizacion+","+entrega+","+","+paciente+","+profesional+","+estado;
     }
 }
 

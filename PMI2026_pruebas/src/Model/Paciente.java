@@ -1,25 +1,19 @@
 package Model;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Windows 10
- */
-public class Paciente extends Persona {
+public class Paciente extends Persona{
+      private Estudios cantidadEstudios = new Estudios();
       private boolean obraSocial;
-      private Long DNI;
+      private long DNI;
       
-        //contructor
+        //contructor vacio
        public Paciente(){
-            super();
-            this.obraSocial = false;
-            this.DNI=null;
         }
-        //accesos
+       
+       //Constructor con parametros, aqui esta el super de Persona
+       public Paciente(String nombre, String apellido, long telefono, String mail, boolean obraSocial1, long DnI){
+           super(nombre, apellido, telefono, mail);
+           this.obraSocial = obraSocial1;
+           this.DNI = DnI;
+       }
         //get
         public boolean getObraSocial(){
             return obraSocial;
@@ -37,6 +31,6 @@ public class Paciente extends Persona {
         }
         @Override 
        public String toString(){
-       return nombre+";"+apellido+";"+DNI;
+       return super.toString()+","+DNI+","+obraSocial;
    }
 }

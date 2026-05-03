@@ -1,55 +1,42 @@
 package Model;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Windows 10
- */
-
 //Se usa la libreria Date, preguntar como se aplicaria
+
 public class Fecha {
-     private int dia;
+    //variables de instancia
+    private int dia;
     private int mes;
     private int anio;
-    
-    //constructores
-    public Fecha (){
-    this.dia = 0;
-    this.mes = 0;
-    this.anio = 0;
-    }
-    
-    //Getters
-    
-    public int getDia(){
+    //observadores
+    public int getDia() {
         return dia;
     }
-    
-    public int getMes(){
+    public int getMes() {
         return mes;
     }
-    
-    public int getAnio(){
+    public int getAnio() {
         return anio;
     }
-    
-    //Setters. Hay que colocar los controles
-    
-    public void setDia(int d1){
-       this.dia = d1;
+    //modificadores
+    public void setDia(int dia) {
+        this.dia = dia;
     }
-    
-    public void setMes(int m1){
-        this.mes = m1;
+    public void setMes(int mes) {
+        this.mes = mes;
     }
-    //Preguntar como se usaria la libreria Date es estos casos
-    public void setAnio (int A1){
-            this.anio = A1;
-        
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+    //constructores
+    public Fecha() {
+    }
+    public Fecha(int dia, int mes, int anio) {
+        this.dia = dia;
+        this.mes = mes;
+        this.anio = anio;
+    }
+    //metodos
+    public String muestraFecha(Fecha para){
+        return para.dia + "," + para.mes + "," + para.anio;
     }
     
     public boolean isEmpty() {
@@ -65,12 +52,8 @@ public class Fecha {
         return false;
     }
 
-    
-    //Retorno. me olvide que habia que poner aca
     @Override
-    public String toString(){
-        return dia+"/"+mes+"/"+anio;
-        
+    public String toString() {
+        return  dia + "," + mes + "," + anio;
     }
 }
-

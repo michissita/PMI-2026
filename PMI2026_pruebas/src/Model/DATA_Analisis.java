@@ -1,14 +1,4 @@
 package Model;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Windows 10
- */
 import java.util.Map;
 import java.util.HashMap;
 
@@ -24,6 +14,10 @@ public class DATA_Analisis {
         tipos.put(6, "Creatinina");
         tipos.put(7, "TSH");
         tipos.put(8, "Trigliceridos");
+        tipos.put(9, "Radiografia");
+        tipos.put(10, "Resonancia");
+        tipos.put(11, "VIH");
+        tipos.put(12, "Sifilis");
     }
    
 }

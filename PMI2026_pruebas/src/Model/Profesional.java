@@ -11,12 +11,15 @@ package Model;
  */
 public class Profesional extends Persona {
      private long matricula;
-        //contructor
+        //contructor vacio
         public Profesional(){
-            super();
-            matricula = 0;
         }
-        //Accesos
+        
+        //Constructor super
+        public Profesional(String nombre, String apellido, long telefono, String mail, long matricula1){
+            super(nombre, apellido, telefono, mail);
+            this.matricula = matricula1;
+        }
         //get
         public long getMatricula(){
             return matricula;
@@ -25,6 +28,9 @@ public class Profesional extends Persona {
         public void setMatricula(long matricula){
             this.matricula = matricula;
         }
-
+     @Override
+     public String toString(){
+         return super.toString()+","+matricula;
+     }
     
 }
