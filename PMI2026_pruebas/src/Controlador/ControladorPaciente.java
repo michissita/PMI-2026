@@ -66,6 +66,6 @@ public class ControladorPaciente {
     //Metodo de Modificacion de Pacientes
     
     public void modificarPacientes (Paciente p){
-        listadePacientes
+        
     }
 }
