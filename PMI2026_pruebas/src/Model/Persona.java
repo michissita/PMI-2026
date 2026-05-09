@@ -43,4 +43,9 @@ public class Persona {
         this.mail = M1;
     }
 
+    @Override
+    
+    public String toString(){
+        return nombre+","+apellido+","+telefono+","+mail;
+    }
 }

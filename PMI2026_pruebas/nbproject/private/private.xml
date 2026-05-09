@@ -2,6 +2,23 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Model/Profesional.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Controlador/ControladorProfesional.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/View/GestionPacientes.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/View/GestionInformacion.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/View/ModificarPacientes.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/main.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/View/CargaInformacion.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/View/GestionProfesionales.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Controlador/ControladorEstudios.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Model/DATA_Analisis.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Model/Estudios.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Controlador/ControladorPaciente.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Model/Persona.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Controlador/ControladorArchivos.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/View/CargaPacientes.java</file>
+            <file>file:/C:/Users/Windows%2010/Documents/NetBeansProjects/PMI2026_pruebas/src/Model/Paciente.java</file>
+        </group>
     </open-files>
 </project-private>

@@ -1,23 +1,12 @@
 
 package Controlador;
-
-import java.util.ArrayList;
 import Model.Paciente;
 
 public class ControladorPaciente {
     private Paciente paciente = new Paciente ();
-    private static ArrayList <Paciente> listadePacientes = new ArrayList <Paciente>();
     
    //Constructor Vacio
     public ControladorPaciente(){
-    }
-    //Constructor con parametros
-    public ControladorPaciente(ArrayList listap){
-        this.listadePacientes = listap;
-    }
-    //get ArrayList
-    public ArrayList getListaPacientes(){
-        return listadePacientes;
     }
     //set
     public void setPacienteNombre(String nombre){
@@ -35,7 +24,7 @@ public class ControladorPaciente {
     public void setPacienteObraSocial(boolean obraSocial){
         this.paciente.setObraSocial(obraSocial);
     }
-    public void setPscienteDNI(long DNI){
+    public void setPacienteDNI(long DNI){
         this.paciente.setDNI(DNI);
     }
     public String getPacienteNombre(){
@@ -56,16 +45,33 @@ public class ControladorPaciente {
     public long getDNI(){
         return paciente.getDNI();
     }
-    
-    //Metodo de Carga de Pacientes
-    
-    public void cargadePacientes( Paciente p){
-        listadePacientes.add(p);
+    public boolean buscarPorDNI(long dniBusqueda) {
+    try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader("Pacientes.txt"))) {
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            String[] v = linea.split(";"); // Separa por punto y coma
+            
+            // Si el DNI de la línea es igual al que buscamos...
+            if (Long.parseLong(v[0]) == dniBusqueda) {
+                // Llenamos el objeto controlador con la info del archivo
+               this.telefono = Long.parseLong(v[3]);
+                this.mail = v[4];
+                this.obraSocial = Boolean.parseBoolean(v[5]);
+                return true; // Éxito: lo encontramos
+            }
+        }
+    } catch (Exception e) {
+        System.out.println("Error al leer archivo: " + e.getMessage());
     }
-    
-    //Metodo de Modificacion de Pacientes
-    
-    public void modificarPacientes (Paciente p){
+    return false; // No se encontró
+}
+
+// Estos "Getters" sirven para que la Vista pueda sacar la info del Controlador
+public long getPacienteTelefono() { 
+    return getTelefono; }
+public String getMail() {
+    return mail; }
+public boolean isObraSocial() { 
+    return obraSocial; }
         
-    }
 }
