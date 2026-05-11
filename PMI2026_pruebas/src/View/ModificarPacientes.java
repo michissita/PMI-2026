@@ -118,13 +118,14 @@ public class ModificarPacientes extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel6))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addGap(80, 80, 80)
-                                .addComponent(jRadioButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(168, 168, 168)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(BuscarDNI)
-                                    .addComponent(modificarpa)))))
+                                    .addComponent(modificarpa)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButton1)
+                                .addGap(69, 69, 69)
+                                .addComponent(jRadioButton2))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton1)))
@@ -158,11 +159,11 @@ public class ModificarPacientes extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel6)))
-                        .addGap(91, 91, 91)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButton1)
                             .addComponent(jRadioButton2))
-                        .addContainerGap(30, Short.MAX_VALUE))
+                        .addContainerGap(103, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(BuscarDNI)
@@ -195,29 +196,6 @@ public class ModificarPacientes extends javax.swing.JFrame {
 
     private void BuscarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarDNIActionPerformed
         // TODO add your handling code here:
-        try {
-        long dniABuscar = Long.parseLong(textoDNI.getText());
-        Controlador.ControladorPaciente control = new Controlador.ControladorPaciente();
-
-        if (control.buscarPorDNI(dniABuscar)) {
-            // RELLENAR LOS TEXT FIELDS CON LA INFO ENCONTRADA
-            textoTelefono.setText(String.valueOf(control.getPacienteTelefono()));
-            textoGmail.setText(control.getPacienteMail());
-            
-            // RELLENAR LOS CHECKBOX
-            if (control.isObraSocial()) {
-                checkSIOS.setSelected(true);
-            } else {
-                checkNOOS.setSelected(true);
-            }
-            
-            javax.swing.JOptionPane.showMessageDialog(this, "Paciente encontrado.");
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "No existe un paciente con ese DNI.");
-        }
-    } catch (NumberFormatException e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Ingrese un DNI válido (solo números).");
-    }
     }//GEN-LAST:event_BuscarDNIActionPerformed
 
     /**

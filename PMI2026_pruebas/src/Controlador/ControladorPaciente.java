@@ -44,34 +44,6 @@ public class ControladorPaciente {
     }
     public long getDNI(){
         return paciente.getDNI();
-    }
-    public boolean buscarPorDNI(long dniBusqueda) {
-    try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader("Pacientes.txt"))) {
-        String linea;
-        while ((linea = br.readLine()) != null) {
-            String[] v = linea.split(";"); // Separa por punto y coma
-            
-            // Si el DNI de la línea es igual al que buscamos...
-            if (Long.parseLong(v[0]) == dniBusqueda) {
-                // Llenamos el objeto controlador con la info del archivo
-               this.telefono = Long.parseLong(v[3]);
-                this.mail = v[4];
-                this.obraSocial = Boolean.parseBoolean(v[5]);
-                return true; // Éxito: lo encontramos
-            }
-        }
-    } catch (Exception e) {
-        System.out.println("Error al leer archivo: " + e.getMessage());
-    }
-    return false; // No se encontró
+}
 }
 
-// Estos "Getters" sirven para que la Vista pueda sacar la info del Controlador
-public long getPacienteTelefono() { 
-    return getTelefono; }
-public String getMail() {
-    return mail; }
-public boolean isObraSocial() { 
-    return obraSocial; }
-        
-}

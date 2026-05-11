@@ -203,62 +203,6 @@ public class CargaPacientes extends javax.swing.JFrame {
 
     private void cargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargaActionPerformed
         // TODO add your handling code here:
-        try {
-        // 1. CAPTURA DE DATOS
-        String dniTexto = textoDNI.getText();
-        String apellido = textoApellido.getText();
-        String nombre = textoNombre.getText();
-        String telefonoTexto = textoTelefono.getText();
-        String gmail = textoGmail.getText();
-
-        // 2. CONTROLES DE VALIDACIÓN (Requisitos del sistema)
-        
-        // Validación DNI (Longitud y Formato)
-        if (dniTexto.length() < 7 || dniTexto.length() > 8) {
-            throw new Exception("El DNI debe tener entre 7 y 8 números.");
-        }
-        long dniLong = Long.parseLong(dniTexto); // Lanza error si hay letras
-
-        // Validación TELÉFONO (10 dígitos exactos)
-        if (telefonoTexto.length() != 10) {
-            throw new Exception("El teléfono debe tener exactamente 10 dígitos.");
-        }
-        long telLong = Long.parseLong(telefonoTexto);
-
-        // Validación OBRA SOCIAL
-        if (!checkSIOS.isSelected() && !checkNOOS.isSelected()) {
-            throw new Exception("Debe seleccionar si el paciente posee Obra Social.");
-        }
-
-        // 3. ALMACENAMIENTO (MVC)
-        // Instanciamos el controlador que maneja la lógica y el archivo TXT
-        Controlador.ControladorPaciente control = new Controlador.ControladorPaciente();
-        
-        // Usamos los setters para cargar la información
-        control.setPacienteDNI(dniLong);
-        control.setPacienteApellido(apellido);
-        control.setPacienteNombre(nombre);
-        control.setPacienteTelefono(telLong);
-        control.setPacienteMail(gmail);
-        control.setObraSocial(checkSIOS.isSelected());
-
-        // LLAMADA AL MÉTODO DE PERSISTENCIA (archivo)
-        control.guardarPacienteEnArchivo(); 
-
-        // 4. FEEDBACK Y LIMPIEZA
-        javax.swing.JOptionPane.showMessageDialog(this, "Paciente almacenado con éxito en el sistema.");
-        
-        // Volver a la ventana de Gestión
-        View.GestionPacientes volver = new View.GestionPacientes();
-        volver.setVisible(true);
-        volver.setLocationRelativeTo(null);
-        this.dispose();
-
-    } catch (NumberFormatException e) {
-        javax.swing.JOptionPane.showMessageDialog(this, "DNI y Teléfono deben ser solo números.", "Error de formato", javax.swing.JOptionPane.ERROR_MESSAGE);
-    } catch (Exception e) {
-        javax.swing.JOptionPane.showMessageDialog(this, e.getMessage(), "Atención", javax.swing.JOptionPane.WARNING_MESSAGE);
-    }
     }//GEN-LAST:event_cargaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

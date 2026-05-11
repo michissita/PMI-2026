@@ -12,6 +12,10 @@ public class GestionInformacion extends javax.swing.JFrame {
      */
     public GestionInformacion() {
         initComponents();
+        this.setLayout(new java.awt.GridBagLayout());
+        this.getContentPane().setBackground(jPanel1.getBackground());
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -33,16 +37,16 @@ public class GestionInformacion extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(154, 202, 237));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setText("Laboratorio de Análisis Clínicos Java SRL");
 
         EstudiosInicio.setBackground(new java.awt.Color(109, 146, 197));
-        EstudiosInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        EstudiosInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         EstudiosInicio.setForeground(new java.awt.Color(255, 255, 255));
         EstudiosInicio.setText("Estudios");
 
         ProfesionalInicio.setBackground(new java.awt.Color(109, 146, 197));
-        ProfesionalInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ProfesionalInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         ProfesionalInicio.setForeground(new java.awt.Color(255, 255, 255));
         ProfesionalInicio.setText("Profesionales");
         ProfesionalInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +56,7 @@ public class GestionInformacion extends javax.swing.JFrame {
         });
 
         PacienteInicio.setBackground(new java.awt.Color(109, 146, 197));
-        PacienteInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        PacienteInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         PacienteInicio.setForeground(new java.awt.Color(255, 255, 255));
         PacienteInicio.setText("Pacientes");
         PacienteInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -66,29 +70,29 @@ public class GestionInformacion extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(165, 165, 165)
                 .addComponent(PacienteInicio)
-                .addGap(98, 98, 98)
+                .addGap(65, 65, 65)
                 .addComponent(ProfesionalInicio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addComponent(EstudiosInicio)
-                .addGap(33, 33, 33))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(126, 126, 126)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PacienteInicio)
                     .addComponent(ProfesionalInicio)
                     .addComponent(EstudiosInicio))
-                .addGap(121, 121, 121))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
